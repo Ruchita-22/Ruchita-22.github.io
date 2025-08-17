@@ -1,91 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ruchita Chandel - Portfolio</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    background-color: #f4f6f8;
-    color: #333;
-  }
-  header {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  header p {
-    font-size: 1.2rem;
-    margin: 10px 0 20px;
-  }
-  header a {
-    color: #f39c12;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  section {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
-    background: white;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  }
-  h2 {
-    color: #2980b9;
-    border-bottom: 2px solid #ecf0f1;
-    padding-bottom: 10px;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  ul li {
-    margin-bottom: 10px;
-  }
-  .experience-list {
-    list-style: disc;
-    padding-left: 20px;
-  }
-  .skills li, .achievements li, .education li {
-    background: #ecf0f1;
-    padding: 8px 12px;
-    border-radius: 5px;
-  }
-  footer {
-    text-align: center;
-    padding: 20px;
-    background: #2c3e50;
-    color: white;
-    margin-top: 40px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruchita Chandel - Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #f4f6f8 60%, #dbeafe 100%);
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 50px 20px 30px 20px;
+      /* border-bottom-left-radius: 38px;
+      border-bottom-right-radius: 38px;*/
+      position: relative;
+    }
+    .profile-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 4px solid #f39c12;
+      margin: 0 auto 18px auto;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 6px 24px rgba(44,62,80,0.20);
+      background: #ecf0f1;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 12px 0 18px;
+      font-weight: 400;
+    }
+    .header-links {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .header-links a {
+      color: #f39c12;
+      background: rgba(255,255,255,0.07);
+      padding: 9px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .header-links a:hover {
+      background: #f39c12;
+      color: #2c3e50;
+    }
+    section {
+      max-width: 900px;
+      margin: 32px auto 0 auto;
+      padding: 40px 30px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 6px 24px rgba(44,62,80,0.09);
+      animation: fadeInUp 1s ease;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    h2 {
+      color: #2980b9;
+      border-bottom: 2px solid #ecf0f1;
+      padding-bottom: 10px;
+      margin-bottom: 22px;
+      font-size: 1.35rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .experience-list {
+      list-style: disc;
+      padding-left: 20px;
+      margin-bottom: 22px;
+    }
+    .skills, .achievements, .education {
+      margin-bottom: 18px;
+    }
+    .skills li, .achievements li, .education li {
+      background: #ecf0f1;
+      padding: 8px 12px;
+      border-radius: 5px;
+      margin-bottom: 8px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 22px;
+      background: #2c3e50;
+      color: white;
+      margin-top: 44px;
+      /*border-top-left-radius: 26px;
+      border-top-right-radius: 26px;*/
+    }
+    /* Responsive */
+    @media (max-width: 700px) {
+      section {
+        padding: 18px 7px;
+      }
+      header {
+        padding: 28px 7px 18px 7px;
+      }
+      h1 { font-size: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .header-links { gap: 10px; }
+      .profile-img { width: 70px; height: 70px; }
+      section { padding: 10px 3px; }
+    }
+  </style>
 </head>
 <body>
 
 <header>
+  <img src="profile.jpeg" alt="profile" class="profile-img">
   <h1>Ruchita Chandel</h1>
   <p>Senior Software Engineer | Java, Microservices, Spring Boot</p>
-  <div>
-      <a href="mailto:ruchita.chandel22@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
-      <a href="https://www.linkedin.com/in/ruchita-chandel-88534a12b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/Ruchita-22" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://leetcode.com/Ruchita_22/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+  <div class="header-links">
+      <a href="mailto:ruchita.chandel22@gmail.com" target="_blank" title="Email"><i class="fa-solid fa-envelope"></i> Email</a>
+      <a href="https://www.linkedin.com/in/ruchita-chandel-88534a12b/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/Ruchita-22" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a href="https://leetcode.com/Ruchita_22/" target="_blank" title="LeetCode"><i class="fa-solid fa-code"></i> LeetCode</a>
   </div>
-
 </header>
 
 <section>
-  <h2>Skills</h2>
+  <h2><i class="fa-solid fa-laptop-code"></i> Skills</h2>
   <ul class="skills">
     <li><strong>Programming Languages:</strong> Java</li>
     <li><strong>Frameworks:</strong> Spring Boot, JPA, Microservices, Hibernate</li>
@@ -95,8 +170,8 @@
 </section>
 
 <section>
-  <h2>Experience</h2>
-  <h3>Morgan Stanley (May 2024 - Present)</h3>
+  <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+  <h3>Morgan Stanley <span style="font-weight:400;">(May 2024 - Present)</span></h3>
   <ul class="experience-list">
     <li>Designed and implemented the <strong>Currency Hedging Settlement Service</strong> to automate and streamline the settlement process, ensuring accuracy and operational efficiency.</li>
     <li>Developed the <strong>CurrencyHedgingJournalService</strong> to post journals on the Hybrid Libra platform, enabling seamless financial data integration.</li>
@@ -104,8 +179,7 @@
     <li>Enhanced DevOps maturity score from 6% to 38% by upgrading <strong>Spring Boot</strong> from 2.5 to 2.7 and ensuring dependency freshness.</li>
     <li><strong>Tech Stack:</strong> Java, Microservices, Spring Boot, JMS, Gradle, Caffeine Cache, DB2</li>
   </ul>
-
-  <h3>Infosys Ltd (Jul 2022 - May 2024)</h3>
+  <h3>Infosys Ltd <span style="font-weight:400;">(Jul 2022 - May 2024)</span></h3>
   <ul class="experience-list">
     <li>Architected a <strong>Microservices-based ECommerce Platform</strong> with support for core functionalities such as Product Catalog, Payment Gateway Integration, Order Service, and Notification Service.</li>
     <li>Implemented an <strong>Event Driven Email Service</strong> to enable large-scale email sending across multiple services within the platform.</li>
@@ -117,8 +191,7 @@
     <li>Utilized <strong>Saga pattern</strong> for distributed transaction management.</li>
     <li><strong>Tech Stack:</strong> Java, Microservices, Spring Boot, AWS, Redis, Kafka</li>
   </ul>
-
-  <h3>IBM (Jan 2018 - Jul 2022)</h3>
+  <h3>IBM <span style="font-weight:400;">(Jan 2018 - Jul 2022)</span></h3>
   <ul class="experience-list">
     <li>Developed a <strong>B2B platform</strong> enabling businesses to host event-related websites, increasing client business by 50%.</li>
     <li>Identified and resolved performance bottlenecks, improving response times by 40% and overall system efficiency.</li>
@@ -127,8 +200,7 @@
     <li>Collaborated with DevOps to migrate the application from Rackspace servers to AWS Cloud.</li>
     <li><strong>Tech Stack:</strong> Core Java, Spring Boot, Rackspace Server, Jenkins, Docker, Kubernetes</li>
   </ul>
-
-  <h3>Nucleus Software (Jul 2017 - Jan 2018)</h3>
+  <h3>Nucleus Software <span style="font-weight:400;">(Jul 2017 - Jan 2018)</span></h3>
   <ul class="experience-list">
     <li>Enhanced the development of a <strong>CAS application</strong> for fintech, improving scalability through microservices architecture using Java Spring Boot.</li>
     <li>Implemented features such as loan application processing, credit checks, and loan disbursal.</li>
@@ -139,7 +211,7 @@
 </section>
 
 <section>
-  <h2>Achievements</h2>
+  <h2><i class="fa-solid fa-trophy"></i> Achievements</h2>
   <ul class="achievements">
     <li>AIR 1579 in Gate 2022 (CSE)</li>
     <li>Eminence Award 2021, Best Junior Talent (IBM, 2019)</li>
@@ -148,7 +220,7 @@
 </section>
 
 <section>
-  <h2>Education</h2>
+  <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
   <ul class="education">
     <li><strong>Scaler</strong> (2023) - Software Development & Problem Solving</li>
     <li><strong>AKG Engineering College</strong> (2017) - BE/B.Tech in Computer Science</li>
@@ -161,6 +233,3 @@
 
 </body>
 </html>
-
-
-
